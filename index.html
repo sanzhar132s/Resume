@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Абдулла Санжар — Frontend Developer</title>
+<meta name="description" content="Резюме Абдуллы Санжара, Frontend Developer (Middle) из Шымкента. Навыки, опыт, проекты и контакты.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Абдулла Санжар — Frontend Developer">
+<meta property="og:description" content="Резюме и портфолио Frontend-разработчика уровня Middle.">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#2563eb">
+<style>
+/* ===== Палитра: основной #2563eb, вторичные #4f46e5 и #06b6d4 ===== */
+:root{
+  --blue:#2563eb; --indigo:#4f46e5; --cyan:#06b6d4;
+  --accent:#2563eb; --accent-ink:#fff; --accent-soft:rgba(37,99,235,.09);
+  --grad:linear-gradient(135deg,#2563eb 0%,#4f46e5 100%);
+  --grad-wide:linear-gradient(120deg,#2563eb 0%,#4f46e5 50%,#0891b2 100%);
+  --bg:#f6f8fc; --text:#101828; --muted:#515c70; --line:rgba(30,50,100,.12);
+  --glass:rgba(255,255,255,.66); --glass-line:rgba(255,255,255,.85); --card:rgba(255,255,255,.78);
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 10px 30px -8px rgba(37,60,140,.14);
+  --glow:0 0 0 1px rgba(37,99,235,.35),0 12px 40px -6px rgba(37,99,235,.30);
+  --blob1:rgba(37,99,235,.30); --blob2:rgba(79,70,229,.24); --blob3:rgba(6,182,212,.24);
+  --dot:rgba(37,60,140,.16);
+  --radius:18px; --max:1040px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#7aa5ff; --accent-ink:#fff; --accent-soft:rgba(122,165,255,.12);
+  --grad-wide:linear-gradient(120deg,#7aa5ff 0%,#8b85ff 50%,#35d0e8 100%);
+  --bg:#0a0d14; --text:#eaeef7; --muted:#a3adc0; --line:rgba(255,255,255,.10);
+  --glass:rgba(18,23,34,.62); --glass-line:rgba(255,255,255,.09); --card:rgba(22,28,41,.66);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px -8px rgba(0,0,0,.5);
+  --glow:0 0 0 1px rgba(122,165,255,.45),0 14px 44px -6px rgba(59,110,255,.38);
+  --blob1:rgba(37,99,235,.38); --blob2:rgba(79,70,229,.32); --blob3:rgba(6,182,212,.24); --dot:rgba(255,255,255,.10);
+}}
+:root[data-theme="dark"]{
+  --accent:#7aa5ff; --accent-ink:#fff; --accent-soft:rgba(122,165,255,.12);
+  --grad-wide:linear-gradient(120deg,#7aa5ff 0%,#8b85ff 50%,#35d0e8 100%);
+  --bg:#0a0d14; --text:#eaeef7; --muted:#a3adc0; --line:rgba(255,255,255,.10);
+  --glass:rgba(18,23,34,.62); --glass-line:rgba(255,255,255,.09); --card:rgba(22,28,41,.66);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px -8px rgba(0,0,0,.5);
+  --glow:0 0 0 1px rgba(122,165,255,.45),0 14px 44px -6px rgba(59,110,255,.38);
+  --blob1:rgba(37,99,235,.38); --blob2:rgba(79,70,229,.32); --blob3:rgba(6,182,212,.24); --dot:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s}
+a{color:var(--accent);transition:opacity .2s}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+h1,h2,h3{line-height:1.15;margin:0}
+h2{font-size:clamp(1.6rem,3.4vw,2.1rem);letter-spacing:-.025em;margin-bottom:36px;position:relative;padding-bottom:16px}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:48px;height:4px;border-radius:4px;background:var(--grad-wide)}
+h3{font-size:1.1rem;letter-spacing:-.01em;line-height:1.35}
+p{margin:0}
+.muted{color:var(--muted)}
+.grad{background:var(--grad-wide);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+
+/* ===== Шапка (glass) ===== */
+.site-header{position:sticky;top:0;z-index:20;background:var(--glass);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--glass-line);box-shadow:0 1px 0 var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;text-decoration:none;color:var(--text)}
+nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+nav a{display:block;padding:7px 14px;border-radius:99px;color:var(--muted);text-decoration:none;font-size:.92rem;white-space:nowrap;transition:color .25s,background .25s,transform .25s}
+nav a:hover{color:var(--text);background:var(--accent-soft)}
+nav a.active{color:#fff;background:var(--grad);font-weight:600;box-shadow:0 4px 14px -3px rgba(37,99,235,.55)}
+.icon-btn{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--glass-line);background:var(--glass);color:var(--text);border-radius:12px;cursor:pointer;flex:none;transition:transform .25s,box-shadow .25s,color .25s}
+.icon-btn:hover{transform:rotate(18deg);color:var(--accent);box-shadow:var(--glow)}
+.icon-btn svg{width:20px;height:20px}
+@media (max-width:760px){.bar{flex-wrap:wrap;padding:8px 0}nav{order:3;width:100%}}
+
+/* ===== Кнопки и иконки ===== */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font:inherit;font-weight:600;text-decoration:none;border:1px solid var(--glass-line);background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--text);cursor:pointer;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--glow);border-color:var(--accent)}
+.btn.primary{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 8px 22px -6px rgba(37,99,235,.6)}
+.btn.primary:hover{box-shadow:0 12px 32px -6px rgba(79,70,229,.75)}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .25s}
+.btn:hover svg{transform:translateX(2px)}
+.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.social a{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid var(--glass-line);background:var(--glass);color:var(--accent);transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.social a svg{width:19px;height:19px}
+.social a:hover{background:var(--grad);color:#fff;transform:translateY(-3px);box-shadow:var(--glow)}
+
+/* ===== Hero: световые пятна и сетка точек ===== */
+.hero{position:relative;overflow:hidden;padding:110px 0 90px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-20%;z-index:-2;pointer-events:none;
+  background:radial-gradient(38% 42% at 18% 28%,var(--blob1),transparent 70%),radial-gradient(34% 40% at 82% 22%,var(--blob2),transparent 70%),radial-gradient(36% 38% at 62% 88%,var(--blob3),transparent 70%);
+  filter:blur(50px);animation:drift 22s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(var(--dot) 1px,transparent 1.2px);background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(70% 80% at 50% 35%,#000 20%,transparent 80%);mask-image:radial-gradient(70% 80% at 50% 35%,#000 20%,transparent 80%)}
+@keyframes drift{to{transform:translate3d(2%,3%,0) scale(1.06)}}
+.status{display:inline-flex;align-items:center;gap:9px;padding:6px 14px;border-radius:99px;background:var(--glass);border:1px solid var(--glass-line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--text);font-size:.88rem;font-weight:600;box-shadow:var(--shadow)}
+.status i{width:8px;height:8px;border-radius:50%;background:#10b981;box-shadow:0 0 0 4px rgba(16,185,129,.2);animation:pulse 2.4s infinite}
+@keyframes pulse{50%{opacity:.45;transform:scale(.8)}}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem);font-weight:800;letter-spacing:-.04em;line-height:1.04;margin:24px 0 14px}
+.hero .role{font-size:clamp(1.2rem,2.8vw,1.65rem);font-weight:700;letter-spacing:-.015em;margin-bottom:18px}
+.hero .lead{max-width:54ch;color:var(--muted);font-size:1.15rem;line-height:1.7}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero .in{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*110ms)}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ===== Карточки (glass + свечение + подсветка за курсором) ===== */
+.card{position:relative;overflow:hidden;background:var(--card);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid var(--glass-line);outline:1px solid var(--line);outline-offset:-1px;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,outline-color .35s}
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(79,110,255,.14),transparent 70%)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--glow);outline-color:rgba(37,99,235,.4)}
+.card:hover::before{opacity:1}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.facts{display:grid;gap:14px;margin:0}
+.facts div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.facts div:last-child{border:0;padding:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;font-weight:600;text-align:right}
+.about{display:grid;gap:36px;grid-template-columns:1.4fr 1fr;align-items:start}
+.about p{color:var(--muted);font-size:1.05rem}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+
+/* ===== Навыки и бейджи ===== */
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.badge{padding:5px 13px;border-radius:99px;background:var(--accent-soft);border:1px solid rgba(37,99,235,.22);color:var(--accent);font-size:.86rem;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .25s,background .25s,border-color .25s,box-shadow .25s}
+.badge:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 6px 16px -6px rgba(37,99,235,.5)}
+.badge.plain{background:var(--glass);color:var(--text);font-weight:500;border-color:var(--line)}
+.level{margin-top:16px}
+.level-row{display:flex;justify-content:space-between;font-size:.92rem;font-weight:600;margin-top:12px}
+.meter{height:8px;border-radius:99px;background:var(--line);margin-top:7px;overflow:visible}
+.meter span{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#2563eb,#4f46e5 60%,#06b6d4);box-shadow:0 0 14px rgba(37,99,235,.55);transition:width 1.3s cubic-bezier(.2,.7,.2,1) .25s}
+.visible .meter span{width:var(--w)}
+
+/* ===== Таймлайн ===== */
+.timeline{position:relative;margin:0;padding:0 0 0 34px;list-style:none}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:3px;border-radius:3px;background:linear-gradient(180deg,#2563eb,#4f46e5 55%,#06b6d4)}
+.timeline>li{position:relative;margin-bottom:26px}
+.timeline>li::before{content:"";position:absolute;left:-34px;top:30px;width:17px;height:17px;border-radius:50%;background:var(--bg);border:4px solid var(--blue);box-shadow:0 0 0 5px rgba(37,99,235,.18),0 0 18px rgba(37,99,235,.6)}
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;margin-bottom:10px}
+.meta .muted{font-size:.9rem;font-weight:600}
+.timeline ul.ach{margin:12px 0 16px;padding-left:20px;color:var(--muted)}
+.timeline ul.ach li{margin:0 0 7px;padding:0}
+.timeline ul.ach li::marker{color:var(--accent)}
+
+/* ===== Проекты и контакты ===== */
+.project{display:flex;flex-direction:column;gap:12px}
+.project .links{display:flex;gap:18px;margin-top:auto;padding-top:6px;font-weight:600}
+.project .links a{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .3s}
+.project .links a:hover{background-size:100% 2px}
+.contacts{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.contacts a{display:flex;align-items:center;gap:16px;text-decoration:none;color:var(--text);font-weight:600}
+.contacts svg{width:48px;height:48px;padding:12px;border-radius:14px;background:var(--grad);color:#fff;flex:none;box-shadow:0 8px 18px -6px rgba(37,99,235,.55);transition:transform .3s}
+.contacts a:hover svg{transform:scale(1.08) rotate(-4deg)}
+.contacts small{display:block;color:var(--muted);font-weight:500}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center}
+
+/* ===== Появление при прокрутке ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .35s,outline-color .35s}
+.reveal.visible{opacity:1;transform:none}
+.card.reveal.visible:hover{transform:translateY(-4px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.hero .in{opacity:1;transform:none}
+  .meter span{width:var(--w)}
+}
+
+/* ===== Печать / PDF ===== */
+@media print{
+  @page{size:A4;margin:14mm}
+  .site-header,.actions,.social,.icon-btn,.hero::before,.hero::after,h2::after,.card::before{display:none!important}
+  :root,:root[data-theme="dark"]{--bg:#fff;--card:#fff;--text:#000;--muted:#333;--line:#ccc;--accent:#1d4ed8;--accent-soft:#eef2ff;--shadow:none;--glass:#fff;--glass-line:#ccc}
+  body{background:#fff;color:#000;font-size:10.5pt;line-height:1.45}
+  *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  section{padding:14px 0}
+  .hero{padding:0 0 10px;overflow:visible}.hero h1{font-size:26pt}
+  .grad{background:none;color:#000;-webkit-text-fill-color:#000}
+  h2{font-size:15pt;margin-bottom:10px;padding:0}
+  .card{box-shadow:none;padding:12px;break-inside:avoid;outline:0;border:1px solid #ccc}
+  .timeline::before{background:#999}.timeline>li::before{box-shadow:none}
+  .contacts svg{background:none;color:#1d4ed8;box-shadow:none;padding:0}
+  .reveal,.hero .in{opacity:1!important;transform:none!important}
+  .meter span{width:var(--w)!important;box-shadow:none;background:#1d4ed8}
+  footer{padding:10px 0}
+  a{color:#000;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="#top" id="logo"></a>
+    <nav aria-label="Разделы страницы"><ul id="nav"></ul></nav>
+    <button class="icon-btn" id="theme" type="button" aria-label="Переключить тему оформления"></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="hero" aria-labelledby="h1"><div class="wrap" id="heroBox"></div></section>
+  <section id="about" aria-labelledby="t-about"><div class="wrap" id="aboutBox"></div></section>
+  <section id="skills" aria-labelledby="t-skills"><div class="wrap" id="skillsBox"></div></section>
+  <section id="experience" aria-labelledby="t-experience"><div class="wrap" id="expBox"></div></section>
+  <section id="projects" aria-labelledby="t-projects"><div class="wrap" id="projBox"></div></section>
+  <section id="education" aria-labelledby="t-education"><div class="wrap" id="eduBox"></div></section>
+  <section id="contacts" aria-labelledby="t-contacts"><div class="wrap" id="contBox"></div></section>
+</main>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+/* =====================================================
+   ВСЕ ВАШИ ДАННЫЕ — ТОЛЬКО ЗДЕСЬ. Меняйте текст и ссылки,
+   страница перерисуется автоматически.
+   Места с пометкой «ЗАМЕНИТЕ» — примеры, подставьте свои.
+   ===================================================== */
+const resume = {
+  name: "Абдулла Санжар",
+  role: "Frontend Developer",
+  level: "Middle",
+  summary: "Создаю быстрые и аккуратные интерфейсы. Использую Python, Go и Bash, чтобы автоматизировать рутину и связывать фронтенд с сервисами.",
+  status: "Открыт к предложениям",
+  about: [
+    "Frontend-разработчик уровня Middle из Шымкента. Делаю адаптивные интерфейсы, которые удобно использовать и легко поддерживать.", // ЗАМЕНИТЕ
+    "Помимо фронтенда пишу скрипты и небольшие сервисы на Python и Go, автоматизирую задачи на Bash.",
+    "Люблю понятный код, чёткие договорённости в команде и измеримый результат."
+  ],
+  facts: [
+    ["Город", "Шымкент, Казахстан"],
+    ["Формат работы", "Удалённо"],            // ЗАМЕНИТЕ: офис / гибрид / релокация
+    ["Английский", "B2"],
+    ["Русский", "Родной"]
+  ],
+  skills: [
+    { group: "Языки", items: [["Python", 75], ["Go", 60], ["Bash", 65], "JavaScript"] },   // число = уровень в %
+    { group: "Frontend / Backend", items: ["HTML", "CSS", "REST API"] },                      // ЗАМЕНИТЕ
+    { group: "Базы данных", items: ["PostgreSQL", "SQLite"] },                                // ЗАМЕНИТЕ
+    { group: "DevOps", items: ["Linux", "Docker", "GitHub Actions"] },                        // ЗАМЕНИТЕ
+    { group: "Инструменты", items: ["Git", "VS Code", "Figma"] }                              // ЗАМЕНИТЕ
+  ],
+  experience: [  // ЗАМЕНИТЕ: пример заполнения. Пишите результат с цифрами.
+    { company: "Название компании", position: "Frontend Developer (Middle)", period: "2023 — наст. время",
+      achievements: [
+        "Ускорил загрузку главной страницы на 40% за счёт оптимизации ресурсов и ленивой загрузки.",
+        "Автоматизировал деплой скриптами на Bash и сократил выпуск релиза с 1 часа до 10 минут.",
+        "Написал сервис на Go, который обрабатывает 5 000 запросов в минуту.",
+        "Покрыл тестами ключевые сценарии и снизил число регрессий на 30%."
+      ],
+      stack: ["JavaScript", "Python", "Go", "Bash", "Docker"] }
+  ],
+  projects: [  // ЗАМЕНИТЕ названия, описания и ссылки
+    { title: "Проект 1", text: "Короткое описание: что делает проект и какую задачу решает.", stack: ["JavaScript", "CSS"], demo: "#", repo: "#" },
+    { title: "Проект 2", text: "Сервис на Go с простым REST API и документацией.", stack: ["Go", "PostgreSQL"], demo: "#", repo: "#" },
+    { title: "Проект 3", text: "Python-скрипт для автоматизации отчётов.", stack: ["Python", "Bash"], demo: "", repo: "#" }
+  ],
+  education: [
+    { title: "Онлайн-курсы Coursera", text: "Курсы по программированию и веб-разработке.", period: "" }   // ЗАМЕНИТЕ: названия курсов и годы
+  ],
+  contacts: {  // ЗАМЕНИТЕ на свои
+    email: "your@email.com",
+    telegram: "https://t.me/your_username",
+    github: "https://github.com/your-username",
+    linkedin: "https://www.linkedin.com/in/your-profile"
+  }
+};
+
+/* ---------- Иконки (inline SVG) ---------- */
+const P = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const icons = {
+  mail: P('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>'),
+  telegram: P('<path d="M21 4 3 11l6 2 2 6 3-4 5 3z"/><path d="m9 13 12-9"/>'),
+  github: P('<path d="M9 19c-4 1-4-2-6-2m12 4v-3a3 3 0 0 0-1-2c3 0 6-1.500 6-6a5 5 0 0 0-1-3 5 5 0 0 0 0-3s-1 0-3 1.500a10 10 0 0 0-6 0C6 5 5 5 5 5a5 5 0 0 0 0 3 5 5 0 0 0-1 3c0 4.500 3 6 6 6a3 3 0 0 0-1 2v3"/>'),
+  linkedin: P('<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>'),
+  pdf: P('<path d="M12 3v12m0 0-4-4m4 4 4-4M4 20h16"/>'),
+  chat: P('<path d="M21 12a8 8 0 0 1-11.500 7.200L3 21l1.800-6A8 8 0 1 1 21 12z"/>'),
+  sun: P('<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.900 4.900l1.400 1.400m11.400 11.400 1.400 1.400M2 12h2m16 0h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/>'),
+  moon: P('<path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/>')
+};
+
+/* ---------- Вспомогательные функции ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const badges = (arr, plain) => `<div class="badges">${arr.map(b => `<span class="badge${plain ? " plain" : ""}">${esc(b)}</span>`).join("")}</div>`;
+const mail = "mailto:" + resume.contacts.email;
+const R = resume;
+
+/* ---------- Рендер страницы из объекта resume ---------- */
+const sections = [["about","Обо мне"],["skills","Навыки"],["experience","Опыт"],["projects","Проекты"],["education","Образование"],["contacts","Контакты"]];
+document.title = `${R.name} — ${R.role}`;
+$("#logo").textContent = R.name;
+$("#nav").innerHTML = sections.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join("");
+
+$("#heroBox").innerHTML = `
+  <span class="status in" style="--i:0"><i></i>${esc(R.status)}</span>
+  <h1 id="h1" class="in" style="--i:1">${esc(R.name)}</h1>
+  <p class="role in" style="--i:2">${esc(R.role).replace(/^(\S+)/, '<span class="grad">$1</span>')} · ${esc(R.level)}</p>
+  <p class="lead in" style="--i:3">${esc(R.summary)}</p>
+  <div class="actions in" style="--i:4">
+    <a class="btn primary" href="#contacts">${icons.chat}Связаться</a>
+    <button class="btn" type="button" onclick="window.print()">${icons.pdf}Скачать PDF</button>
+  </div>
+  <div class="social in" style="--i:5">
+    <a href="${esc(R.contacts.github)}" aria-label="GitHub" rel="noopener">${icons.github}</a>
+    <a href="${esc(R.contacts.linkedin)}" aria-label="LinkedIn" rel="noopener">${icons.linkedin}</a>
+    <a href="${esc(R.contacts.telegram)}" aria-label="Telegram" rel="noopener">${icons.telegram}</a>
+    <a href="${mail}" aria-label="Написать на email">${icons.mail}</a>
+  </div>`;
+
+$("#aboutBox").innerHTML = `<h2 id="t-about">Обо мне</h2>
+  <div class="about reveal">
+    <div>${R.about.map(p => `<p style="margin-bottom:14px">${esc(p)}</p>`).join("")}</div>
+    <dl class="facts card">${R.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+  </div>`;
+
+$("#skillsBox").innerHTML = `<h2 id="t-skills">Навыки</h2><div class="grid">${R.skills.map(g => {
+  const bars = g.items.filter(Array.isArray), plain = g.items.filter(i => !Array.isArray(i));
+  return `<article class="card reveal"><h3>${esc(g.group)}</h3>
+    ${bars.map(([n, v]) => `<div class="level"><div class="level-row"><span>${esc(n)}</span><span class="muted">${v}%</span></div><div class="meter" role="img" aria-label="${esc(n)}: ${v}%"><span style="--w:${v}%"></span></div></div>`).join("")}
+    ${plain.length ? badges(plain) : ""}</article>`;}).join("")}</div>`;
+
+$("#expBox").innerHTML = `<h2 id="t-experience">Опыт работы</h2><ol class="timeline">${R.experience.map(e => `
+  <li class="reveal"><article class="card">
+    <div class="meta"><h3>${esc(e.position)} · ${esc(e.company)}</h3><span class="muted">${esc(e.period)}</span></div>
+    <ul class="ach">${e.achievements.map(a => `<li>${esc(a)}</li>`).join("")}</ul>${badges(e.stack, true)}
+  </article></li>`).join("")}</ol>`;
+
+$("#projBox").innerHTML = `<h2 id="t-projects">Проекты</h2><div class="grid">${R.projects.map(p => `
+  <article class="card project reveal"><h3>${esc(p.title)}</h3><p class="muted">${esc(p.text)}</p>${badges(p.stack)}
+    <div class="links">${p.demo ? `<a href="${esc(p.demo)}" rel="noopener">Демо</a>` : ""}${p.repo ? `<a href="${esc(p.repo)}" rel="noopener">Репозиторий</a>` : ""}</div>
+  </article>`).join("")}</div>`;
+
+$("#eduBox").innerHTML = `<h2 id="t-education">Образование и сертификаты</h2><div class="grid">${R.education.map(e => `
+  <article class="card reveal"><h3>${esc(e.title)}</h3><p class="muted">${esc(e.text)}</p>${e.period ? `<p class="muted">${esc(e.period)}</p>` : ""}</article>`).join("")}</div>`;
+
+const c = R.contacts;
+const cItem = (href, icon, label, val) => `<a class="card reveal" href="${esc(href)}" rel="noopener">${icon}<span><small>${label}</small>${esc(val)}</span></a>`;
+$("#contBox").innerHTML = `<h2 id="t-contacts">Контакты</h2><div class="contacts">
+  ${cItem(mail, icons.mail, "Email", c.email)}
+  ${cItem(c.telegram, icons.telegram, "Telegram", c.telegram.replace("https://t.me/", "@"))}
+  ${cItem(c.github, icons.github, "GitHub", c.github.replace("https://github.com/", ""))}
+  ${cItem(c.linkedin, icons.linkedin, "LinkedIn", "Профиль")}</div>`;
+$("#foot").textContent = `© ${new Date().getFullYear()} ${R.name}`;
+
+/* ---------- Тема: авто + ручное переключение (localStorage с try/catch) ---------- */
+const root = document.documentElement, btn = $("#theme");
+const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+const paint = () => { btn.innerHTML = isDark() ? icons.sun : icons.moon; };
+try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
+paint();
+btn.addEventListener("click", () => {
+  const next = isDark() ? "light" : "dark";
+  root.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch (e) {}
+  paint();
+});
+
+/* ---------- Мягкая подсветка карточки за курсором ---------- */
+if (matchMedia("(hover: hover)").matches) {
+  document.querySelectorAll(".card").forEach(el => el.addEventListener("pointermove", e => {
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    el.style.setProperty("--my", (e.clientY - r.top) + "px");
+  }));
+}
+
+/* ---------- Ступенчатая задержка появления карточек в сетке ---------- */
+document.querySelectorAll(".grid, .contacts").forEach(g =>
+  [...g.children].forEach((el, i) => { el.style.transitionDelay = (i * 80) + "ms"; el.addEventListener("transitionend", () => el.style.transitionDelay = "", { once: true }); }));
+
+/* ---------- Появление блоков при прокрутке ---------- */
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) { en.target.classList.add("visible"); io.unobserve(en.target); }
+}), { threshold: .12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+/* ---------- Подсветка активного раздела в меню ---------- */
+const links = [...document.querySelectorAll("#nav a")];
+const spy = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
+}), { rootMargin: "-40% 0px -55% 0px" });
+sections.forEach(([id]) => spy.observe(document.getElementById(id)));
+</script>
+</body>
+</html>
